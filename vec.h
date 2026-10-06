@@ -24,6 +24,28 @@ public:
     vec_t(const vec_t&) = delete;
     vec_t& operator=(const vec_t&) = delete;
 
+    // Accesses an element by index for reading and writing.
+    T& operator[](size_t index) {
+        return data[index];
+    }
+
+    // Accesses an element by index in const mode.
+    const T& operator[](size_t index) const {
+        return data[index];
+    }
+
+    // Returns a pointer to the first element in the vector.
+    T* begin();
+
+    // Returns a pointer to the element just past the last one.
+    T* end();
+
+    // Returns the first element.
+    T& front();
+
+    // Returns the last element.
+    T& back();
+
     // Appends an element to the end of the vector.
     void push_back(const T val);
 
@@ -35,6 +57,9 @@ public:
 
     // Removes the first element if the vector is not empty.
     void pop_front();
+
+    // Inserts a value at the specified index.
+    void insert(size_t index,const T& value);
 
     // Replaces the value at the specified index.
     void set_value(const T& value, size_t index);
@@ -50,6 +75,9 @@ public:
 
     // Removes the first occurrence of the given value.
     void clear_el(T value);
+
+    // Prints a short help guide describing the available vector methods.
+    void help() const;
 
     // Returns the current number of elements.
     size_t get_size() const;

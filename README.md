@@ -9,9 +9,30 @@ The `stdvec::vec_t<T>` class stores elements in a dynamically allocated array an
 - adding elements to the front or back
 - removing elements from the front or back
 - getting and setting values by index
+- using `operator[]`, `front()`, and `back()`
+- accessing iterator-like pointers with `begin()` and `end()`
+- inserting and clearing elements
 - checking the size and capacity
 - printing elements
 - clearing the vector
+
+## Available methods
+
+- `operator[]`
+- `begin()` / `end()`
+- `front()` / `back()`
+- `push_back()`
+- `pop_back()`
+- `push_front()`
+- `pop_front()`
+- `insert()`
+- `set_value()`
+- `get_size()` / `get_cap()`
+- `get_value()`
+- `isEmpty()`
+- `print_all()` / `print_el()`
+- `clear_all()` / `clear_el()`
+- `help()`
 
 ## Files
 
